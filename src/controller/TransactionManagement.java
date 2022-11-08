@@ -64,7 +64,8 @@ public class TransactionManagement {
 
     public void printTransaction(){
         System.out.println();
-        System.out.println("                                ---- TRANSACTION INFO ----");
+        System.out.println("                                        ---- TRANSACTION INFO ----");
+        System.out.println();
         DisplayFormat.displayTransaction();
         Bank.transactions.forEach(t -> System.out.printf(DisplayFormat.transactionFormat, t.getTransactionID(),
                 t.getCardID(), t.getTransactionDate(), t.getTransactionAmount(),t.getNote(), "\n"));
@@ -118,6 +119,7 @@ public class TransactionManagement {
         return returnDate;
     }
     public void selectTop3Transactions(){
+        System.out.println("                                        ---- TOP 3 TRANSACTION ----");
         System.out.println();
         DisplayFormat.displayTransaction();
         for (int i = 0; i <= 2; i++){

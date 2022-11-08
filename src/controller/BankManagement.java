@@ -90,19 +90,19 @@ public class BankManagement {
             if (type == CardCategory.CREDIT_CARD.getType()){
                 System.out.println();
                 System.out.println("                                            CREDIT CARD INFO");
-                System.out.println("---------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("--------------------------------------------------------------------------------------------------------------");
                 DisplayFormat.displayCreditCard();
             }
             if (type == CardCategory.DEBIT_CARD.getType()){
                 System.out.println();
                 System.out.println("                                            DEBIT CARD INFO");
-                System.out.println("---------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("--------------------------------------------------------------------------------------------------------------");
                 DisplayFormat.displayDebitCard();
             }
             if (type == CardCategory.ATM_CARD.getType()) {
                 System.out.println();
                 System.out.println("                                            ATM CARD INFO");
-                System.out.println("---------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("--------------------------------------------------------------------------------------------------------------");
                 DisplayFormat.displayATMCard();
             }
             cards.forEach(Card::showCardInfo);

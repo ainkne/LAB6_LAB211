@@ -10,7 +10,7 @@ public enum CardCategory {
 
     int type;
 
-    private static Map<Object, Object> map = new HashMap<>();
+    private static final Map<Object, Object> map = new HashMap<>();
 
     static {
         for (CardCategory category : CardCategory.values()) {
