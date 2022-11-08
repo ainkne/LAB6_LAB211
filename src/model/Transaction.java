@@ -2,7 +2,7 @@ package model;
 
 import java.time.LocalDate;
 
-public class Transaction{
+public class Transaction implements Comparable<Transaction> {
     private String transactionID, cardID;
     private double transactionAmount;
     private LocalDate transactionDate;
@@ -66,5 +66,9 @@ public class Transaction{
     @Override
     public String toString() {
         return getTransactionID() + ", " + getCardID() + ", " + getTransactionDate() + ", " + getTransactionAmount() + ", " + getNote();
+    }
+    @Override
+    public int compareTo(Transaction o) {
+        return Double.compare(o.transactionAmount, this.transactionAmount); //desc order
     }
 }

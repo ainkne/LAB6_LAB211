@@ -11,6 +11,7 @@ import thread.TransactionWriterThread;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Collections;
 
 public class TransactionManagement {
     Bank bank = new Bank();
@@ -45,6 +46,7 @@ public class TransactionManagement {
 
             Bank.transactions.add(new Transaction(transaction.getTransactionID(), transaction.getCardID(),
                     transaction.getTransactionAmount(), transaction.getTransactionDate(), transaction.getNote()));
+            Collections.sort(Bank.transactions);
             String keepGoing = Input.inputYesNo("Do you want to add more transaction (y) continue, (n) to discard: ");
             if (keepGoing.equals("n")) break;
 
@@ -62,7 +64,7 @@ public class TransactionManagement {
 
     public void printTransaction(){
         System.out.println();
-        System.out.println("                            ---- TRANSACTION INFO ----");
+        System.out.println("                                ---- TRANSACTION INFO ----");
         DisplayFormat.displayTransaction();
         Bank.transactions.forEach(t -> System.out.printf(DisplayFormat.transactionFormat, t.getTransactionID(),
                 t.getCardID(), t.getTransactionDate(), t.getTransactionAmount(),t.getNote(), "\n"));
@@ -114,5 +116,14 @@ public class TransactionManagement {
             returnDate = date;
         }
         return returnDate;
+    }
+    public void selectTop3Transactions(){
+        System.out.println();
+        DisplayFormat.displayTransaction();
+        for (int i = 0; i <= 2; i++){
+            Transaction t = Bank.transactions.get(i);
+            System.out.printf(DisplayFormat.transactionFormat, t.getTransactionID(), t.getCardID(), t.getTransactionDate(),
+                    t.getTransactionAmount(), t.getNote(), "\n");
+        }
     }
 }

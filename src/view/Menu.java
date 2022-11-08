@@ -7,7 +7,7 @@ import exception.TransactionDateException;
 import function.Input;
 
 public class Menu {
-    private static final String[] menuContents = {"SHOW CARDS", "ADD CARD", "SHOW TRANSACTIONS", "ADD TRANSACTION", "QUIT"};
+    private static final String[] menuContents = {"SHOW CARDS", "SHOW TRANSACTIONS", "SHOW TOP 3 TRANSACTIONS", "ADD CARD", "ADD TRANSACTION", "QUIT"};
     BankManagement bankManagement = new BankManagement();
     TransactionManagement transactionManagement = new TransactionManagement();
     public Menu() {}
@@ -22,10 +22,11 @@ public class Menu {
             int choice = Input.getUserChoice("Enter your choice: ", menuContents.length);
             switch (choice){
                 case 1 -> bankManagement.displayCards();
-                case 2 -> bankManagement.inputCard();
-                case 3 -> transactionManagement.printTransaction();
-                case 4 -> transactionManagement.addTransaction();
-                case 5 -> System.exit(0);
+                case 2 -> transactionManagement.printTransaction();
+                case 3 -> transactionManagement.selectTop3Transactions();
+                case 4 -> bankManagement.inputCard();
+                case 5 -> transactionManagement.addTransaction();
+                case 6 -> System.exit(0);
             }
         }
     }

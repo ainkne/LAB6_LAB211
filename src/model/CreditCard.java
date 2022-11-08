@@ -9,9 +9,7 @@ public class CreditCard extends Card{
     private double amountDue;
     private double amountMax;
 
-    public CreditCard() {
-    }
-
+    public CreditCard() {}
 
     public CreditCard(String cardID, String cardNumber, LocalDate dateRelease, int type, LocalDate dateValid, double amountDue, double amountMax) {
         super(cardID, cardNumber, dateRelease, type);
