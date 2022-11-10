@@ -34,7 +34,7 @@ public class Input {
 
     public static String inputCardId(String prompt){
         while (true){
-            String id = inputString(prompt);
+            String id = inputString(prompt).toUpperCase();
             if (Validation.isCardIdValid.test(id)) return id;
             System.out.println("Card with ID: \"" + id + "\" is already exist!" );
         }
@@ -42,7 +42,7 @@ public class Input {
 
     public static String inputCardIdForTransaction(String prompt){
         while (true){
-            String id = inputString(prompt);
+            String id = inputString(prompt).toUpperCase();
             if (!Validation.isCardIdValid.test(id)) return id;
             System.out.println("Card with ID: \"" + id + "\" is NOT exist!" );
         }

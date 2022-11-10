@@ -47,7 +47,7 @@ public class BankManagement {
 
     private void inputCreditCard() throws TransactionDateException {
         CreditCard c = new CreditCard();
-        c.setCardID(Input.inputCardId("Enter CreditCard's ID: "));
+        c.setCardID(Input.inputCardId("Enter CreditCard's ID: ").toUpperCase());
         c.setCardNumber(Input.inputCardNum("Enter CreditCard's Number: "));
         c.setType(CardCategory.CREDIT_CARD.getType());
         LocalDate rD = LocalDate.parse(Input.inputDate("Enter CreditCard's date release: "), Validation.formatter);
@@ -61,7 +61,7 @@ public class BankManagement {
 
     private void inputDebitCard() throws TransactionDateException {
         DebitCard d = new DebitCard();
-        d.setCardID(Input.inputCardId("Enter DebitCard's ID: "));
+        d.setCardID(Input.inputCardId("Enter DebitCard's ID: ").toUpperCase());
         d.setCardNumber(Input.inputCardNum("Enter DebitCard's Number: "));
         d.setType(CardCategory.DEBIT_CARD.getType());
         LocalDate rD = LocalDate.parse(Input.inputDate("Enter DebitCard's date release: "), Validation.formatter);
@@ -73,7 +73,7 @@ public class BankManagement {
 
     private void inputAtmCard() throws TransactionDateException {
         ATMCard a = new ATMCard();
-        a.setCardID(Input.inputCardId("Enter ATMCard's ID: "));
+        a.setCardID(Input.inputCardId("Enter ATMCard's ID: ").toUpperCase());
         a.setCardNumber(Input.inputCardNum("Enter ATMCard's Number: "));
         a.setType(CardCategory.ATM_CARD.getType());
         LocalDate rd = LocalDate.parse(Input.inputDate("Enter ATMCard's date release: "), Validation.formatter);

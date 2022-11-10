@@ -2,6 +2,7 @@ TR6963839, CC001, 2022-11-08, 340.0, @VinMart buying stuffs
 TR2325995, AC001, 2022-11-08, 250.0, @Mega buying laptop
 TR9333249, AC001, 2022-11-08, 200.0, @MbBank withdraws $200
 TR2501914, CC001, 2022-11-08, 123.0, @Buying foods
+TR8653162, CC003, 2022-11-08, 45.0, @GameCenter pay for videogame
 TR2066431, AC001, 2022-11-08, 15.0, @Helio playing game
 TR546642, CC001, 2022-11-08, 5.0, @FPT buying Iphone
 TR4461914, DC001, 2022-11-08, 5.0, @Market to buy stuffs

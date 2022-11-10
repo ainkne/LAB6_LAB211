@@ -78,7 +78,7 @@ public class TransactionManagement {
                 throw new CardException("Total payment is greater than your amount max!");
             }
             n = transactionAmount;
-            ((CreditCard) card).setAmountDue(transactionAmount);
+            ((CreditCard) card).setAmountDue(((CreditCard) card).getAmountMax() - transactionAmount);
         }
         if (card instanceof DebitCard) {
             if (transactionAmount > ((DebitCard) card).getAmountRemain()){
